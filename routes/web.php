@@ -21,6 +21,8 @@ Route::get('/hello-universe', function () {
     return view('Hello-universe', ['name' => 'Egita']);
 });
 
+Route::get('/blog', [PageController::class, 'index']);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
