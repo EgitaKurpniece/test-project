@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,9 @@ Route::get('/hello-universe', function () {
     return view('Hello-universe', ['name' => 'Egita']);
 });
 
-Route::get('/blog', [PageController::class, 'index']);
+Route::get('/post', [PageController::class, 'index']);
+
+Route::get('page', [PageController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
